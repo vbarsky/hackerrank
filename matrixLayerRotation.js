@@ -33,7 +33,6 @@ function rotateOneElement(rowLength, columnLength, r, j, i) {
     const actualColumnLength = columnLength - layerNumber * 2;
     const layerLength = actualRowLength * actualColumnLength - (actualRowLength - 2) * (actualColumnLength - 2);
 
-    // const layerLength = rowLength * 2 + columnLength * 2 - 4 * layerNumber - 4;
     const realR = r % layerLength;
     let actualJ = j;
     let actualI = i;
@@ -50,8 +49,6 @@ function rotateOneElement(rowLength, columnLength, r, j, i) {
     }
     return [actualI, actualJ];
 }
-
-// console.log(rotateOneElement(4, 4, 1, 0, 3));
 
 function rotateByOne(i, j, rowLength, columnLength, layerNumber) {
     if (
